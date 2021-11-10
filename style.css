@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cinzel Decorative", cursive;
+  /* cursor: none; */
+}
+body {
+  /* cursor: none; */
+  background-color: #420fe7;
+}
+
+#nav-div {
+  font-size: 1.8rem;
+  z-index: 10;
+  margin: 3rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 0.5rem 0rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.first {
+  margin: 6rem 0 1rem 0;
+}
+
+.inside-first {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+
+.welcome-text {
+  margin: -2rem 0rem;
+  text-align: center;
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 500;
+  word-spacing: 0.2rem;
+  letter-spacing: -0.6rem;
+  font-size: 7.5rem;
+  color: rgb(1, 225, 255);
+}
+
+#circle-ring {
+  width: 10rem;
+  opacity: 25%;
+  position: absolute;
+  transform: translate(-20rem, -3rem);
+  z-index: -1;
+}
+
+.of {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.off {
+  display: inline-block;
+}
+
+.brackets {
+  font-size: 5rem;
+  color: rgb(255, 169, 251);
+}
+
+.arrow {
+  position: absolute;
+}
+
+.arrow1 {
+  width: 4rem;
+  transform: translate(8rem, -5rem);
+}
+
+.arrow2 {
+  width: 5rem;
+  transform: translate(-8rem, 6rem);
+}
+
+#into-me {
+  margin: 1rem -1rem 1rem 6rem;
+}
+
+.small-intro {
+  display: inline-block;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 0;
+  padding: 0 1rem 0rem 1rem;
+  font-weight: lighter;
+  color: rgb(255, 153, 153);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.art-text {
+  display: inline-block;
+  position: absolute;
+  transform: translate(0, -23rem);
+  width: 100%;
+  z-index: -1;
+  align-items: center;
+  text-align: center;
+}
+
+#arttext {
+  font-size: 40rem;
+  color: rgb(255, 195, 230);
+  font-family: "Philosopher", sans-serif;
+}
+
+.red-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#red-arrow {
+  width: 3rem;
+  position: absolute;
+  transform: translate(0, 35rem);
+}
+
+.rotateing-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 48rem;
+}
+.rotateing-text1 {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-37rem);
+}
+
+#circ {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-family: "cousine", monospace;
+  text-transform: uppercase;
+  animation: spin 115s linear infinite;
+  color: #ffe553;
+}
+
+#circ2 {
+  display: inline-block;
+  font-size: 1.8rem;
+
+  text-transform: uppercase;
+  animation: spin1 180s linear infinite;
+  color: #6ffaff;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin1 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.second {
+  background-color: #551717;
+  height: 100vh;
+}
