@@ -9,6 +9,11 @@ body {
   background-color: #420fe7;
 }
 
+.flex-disp {
+  display: flex;
+  justify-content: center;
+}
+
 #nav-div {
   font-size: 1.8rem;
   z-index: 10;
@@ -29,6 +34,7 @@ a {
 
 .first {
   margin: 6rem 0 1rem 0;
+  height: 80rem;
 }
 
 .inside-first {
@@ -56,8 +62,6 @@ a {
 }
 
 .of {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -92,7 +96,6 @@ a {
   display: inline-block;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  letter-spacing: 0;
   padding: 0 1rem 0rem 1rem;
   font-weight: lighter;
   color: rgb(255, 153, 153);
@@ -117,8 +120,6 @@ a {
 }
 
 .red-arrow {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -129,32 +130,27 @@ a {
 }
 
 .rotateing-text {
-  display: flex;
-  justify-content: center;
   margin-top: 48rem;
 }
 .rotateing-text1 {
-  display: flex;
-  justify-content: center;
   transform: translateY(-37rem);
 }
 
 #circ {
   display: inline-block;
+  margin-top: 8rem;
   font-size: 2.2rem;
   font-family: "cousine", monospace;
   text-transform: uppercase;
   animation: spin 115s linear infinite;
-  color: #ffe553;
 }
 
 #circ2 {
   display: inline-block;
   font-size: 1.8rem;
-
   text-transform: uppercase;
   animation: spin1 180s linear infinite;
-  color: #6ffaff;
+  color: white;
 }
 
 @keyframes spin {
@@ -169,7 +165,37 @@ a {
   }
 }
 
-.second {
-  background-color: #551717;
-  height: 100vh;
+.divider {
+  border: none;
+  border-bottom: 1px solid rgb(67, 142, 255);
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.container1 {
+  background: rgb(255, 225, 144);
+  height: 100rem;
+}
+
+.container2 {
+  background: white;
+  height: 100rem;
+  transform: translateY(-45rem);
+}
+
+.text {
+  text-align: center;
+  color: rgb(129, 115, 75);
+  font-size: 2.5rem;
+}
+
+#quality {
+  font-size: 4rem;
+  letter-spacing: -0.3rem;
+  color: rgb(255, 196, 107);
+}
+
+#text1 {
+  line-height: 3rem;
+  padding: 2rem 0 0 0;
 }
