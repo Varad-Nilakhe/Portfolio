@@ -3,7 +3,6 @@
 new kursor({
   type: 1,
   removeDefaultCursor: true,
-  color: "#ff61e5",
 });
 
 // skeww
@@ -11,9 +10,9 @@ new kursor({
 // Smooth scrolling
 
 const body = document.body,
-  scrollWrap = document.getElementsByClassName("first")[0],
+  scrollWrap = document.getElementsByClassName("smooth")[0],
   height = scrollWrap.getBoundingClientRect().height - 1,
-  speed = 0.08;
+  speed = 0.06;
 
 var offset = 0;
 
@@ -35,7 +34,26 @@ smoothScroll();
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
-timeline.to(".art-text", 6, { y: 200 });
+timeline.to(".art-text", 8, { y: 200 });
+timeline.fromTo(
+  ".container1",
+  { borderRadius: 2800 },
+  { borderRadius: 0, duration: 2.2 },
+  "-=7"
+);
+timeline.fromTo(".cir", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=6");
+timeline.fromTo(
+  ".container2",
+  { borderRadius: 2800 },
+  { borderRadius: 0, duration: 2.2 },
+  "-=5.5"
+);
+timeline.fromTo(
+  ".opaci",
+  { opacity: 0, y: "30%" },
+  { opacity: 1, y: "0%", duration: 0.5 },
+  "-=4.4"
+);
 
 let scene = new ScrollMagic.Scene({
   triggerElement: "nav .nav-div",
@@ -48,7 +66,7 @@ let scene = new ScrollMagic.Scene({
   .addTo(controller);
 
 let proxy = { skew: 0 },
-  skewSetter = gsap.quickSetter(".welcome-text", "skewY", "deg"), // fast
+  skewSetter = gsap.quickSetter(".skewness", "skewY", "deg"), // fast
   clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
 
 ScrollTrigger.create({
