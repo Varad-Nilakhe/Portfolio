@@ -1,11 +1,71 @@
+// another gsap
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.fromTo(
+  ".slide4",
+  { opacity: 0, y: "-155%", fontSize: "10rem" },
+  { opacity: 1, y: "-180%", duration: 0.6 }
+);
+tl.fromTo(
+  ".slide5",
+  { opacity: 0, y: "-155%", fontSize: "10rem" },
+  { opacity: 1, y: "-185%", duration: 0.6 },
+  "-=0.4"
+);
+tl.fromTo(
+  "#arttext",
+  { opacity: 0, y: "-58%", fontSize: "65rem" },
+  { opacity: 1, y: "-68%", duration: 1 },
+  "-=0.6"
+);
+tl.to(".slide4", { y: "0%", fontSize: "7.5rem", duration: 0.6 });
+tl.to(".slide5", { y: "0%", fontSize: "7.5rem", duration: 0.6 }, "-=0.6");
+tl.to("#arttext", { y: "0%", fontSize: "40rem", duration: 1 }, "-=0.4");
+
+tl.fromTo(
+  ".slide1",
+  { opacity: 0, y: "30%" },
+  { opacity: 1, y: "0%", duration: 0.6 }
+);
+tl.fromTo(
+  ".slide2",
+  { opacity: 0, y: "30%" },
+  { opacity: 1, y: "0%", duration: 0.6 },
+  "-=0.4"
+);
+tl.fromTo(
+  ".slide3",
+  { opacity: 0, y: "30%" },
+  { opacity: 1, y: "0%", duration: 0.6 },
+  "-=0.4"
+);
+tl.fromTo(
+  ".imgsc",
+  { opacity: 0, width: "50rem" },
+  { opacity: 0.4, width: "10rem", duration: 0.6 },
+  "-=0.4"
+);
+tl.fromTo(".imgs", { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.6");
+
+tl.fromTo(
+  ".slidedef",
+  { opacity: 0, x: "160%" },
+  { opacity: 1, x: "0%", duration: 0.6 },
+  "-=0.6"
+);
+tl.fromTo(
+  "#nav-div",
+  { opacity: 0, y: "20%" },
+  { opacity: 1, y: "0%", duration: 0.6 },
+  "-=0.6"
+);
+
 // Custom cursor
 
 new kursor({
   type: 1,
   removeDefaultCursor: true,
 });
-
-// skeww
 
 // Smooth scrolling
 
@@ -34,25 +94,25 @@ smoothScroll();
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
-timeline.to(".art-text", 8, { y: 200 });
+timeline.to(".art-text", 10, { y: 200 });
 timeline.fromTo(
   ".container1",
   { borderRadius: 2800 },
-  { borderRadius: 0, duration: 2.2 },
-  "-=7"
+  { borderRadius: -600, duration: 4 },
+  "-=8.6"
 );
-timeline.fromTo(".cir", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=6");
+timeline.fromTo(".cir", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=7.3");
 timeline.fromTo(
   ".container2",
   { borderRadius: 2800 },
-  { borderRadius: 0, duration: 2.2 },
-  "-=5.5"
+  { borderRadius: -600, duration: 4 },
+  "-=6.6"
 );
 timeline.fromTo(
   ".opaci",
   { opacity: 0, y: "30%" },
-  { opacity: 1, y: "0%", duration: 0.5 },
-  "-=4.4"
+  { opacity: 1, y: "0%", duration: 1 },
+  "-=5.2"
 );
 
 let scene = new ScrollMagic.Scene({
@@ -65,13 +125,15 @@ let scene = new ScrollMagic.Scene({
   .setPin("nav .nav-div")
   .addTo(controller);
 
+// skeww effect
+
 let proxy = { skew: 0 },
-  skewSetter = gsap.quickSetter(".skewness", "skewY", "deg"), // fast
+  skewSetter = gsap.quickSetter(".skew", "skewY", "deg"), // fast
   clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
 
 ScrollTrigger.create({
   onUpdate: (self) => {
-    let skew = clamp(self.getVelocity() / -300);
+    let skew = clamp(self.getVelocity() / -200);
     console.log(skew);
     // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
     if (Math.abs(skew) > Math.abs(proxy.skew)) {
