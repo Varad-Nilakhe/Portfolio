@@ -6,7 +6,7 @@
 }
 body {
   /* cursor: none; */
-  background-color: #420fe7;
+  background-color: #f1eae5;
 }
 
 .flex-disp {
@@ -17,7 +17,7 @@ body {
 #nav-div {
   font-size: 1.8rem;
   z-index: 10;
-  margin: 3rem 4rem;
+  margin: 3rem 3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -29,7 +29,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: black;
 }
 
 .first {
@@ -50,7 +50,6 @@ a {
   word-spacing: 0.2rem;
   letter-spacing: -0.6rem;
   font-size: 7.5rem;
-  color: rgb(1, 225, 255);
 }
 
 #circle-ring {
@@ -71,7 +70,7 @@ a {
 
 .brackets {
   font-size: 5rem;
-  color: rgb(255, 169, 251);
+  color: rgb(255, 162, 167);
 }
 
 .arrow {
@@ -89,7 +88,7 @@ a {
 }
 
 #into-me {
-  margin: 1rem -1rem 1rem 6rem;
+  margin: 1rem -1rem 1rem 4rem;
 }
 
 .small-intro {
@@ -98,7 +97,7 @@ a {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 0 1rem 0rem 1rem;
   font-weight: lighter;
-  color: rgb(255, 153, 153);
+  color: rgb(54, 54, 54);
   font-size: 0.9rem;
   text-align: center;
 }
@@ -115,7 +114,7 @@ a {
 
 #arttext {
   font-size: 40rem;
-  color: rgb(255, 195, 230);
+  color: rgb(255, 195, 198);
   font-family: "Philosopher", sans-serif;
 }
 
@@ -124,9 +123,9 @@ a {
 }
 
 #red-arrow {
-  width: 3rem;
+  width: 5rem;
   position: absolute;
-  transform: translate(0, 35rem);
+  transform: translate(0, 39rem);
 }
 
 .rotateing-text {
@@ -150,7 +149,7 @@ a {
   font-size: 1.8rem;
   text-transform: uppercase;
   animation: spin1 180s linear infinite;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 @keyframes spin {
@@ -173,29 +172,48 @@ a {
 }
 
 .container1 {
-  background: rgb(255, 225, 144);
+  background: #ead4c7;
   height: 100rem;
 }
 
+.arrow2 {
+  transform: translate(-8rem, 6rem);
+}
+
+.downarrow2 {
+  transform: translateY(-31rem);
+}
+
+#downarrow2 {
+  width: 3rem;
+}
+
 .container2 {
-  background: white;
+  background: #faf7f4;
   height: 100rem;
-  transform: translateY(-45rem);
+  transform: translateY(-42rem);
 }
 
 .text {
   text-align: center;
-  color: rgb(129, 115, 75);
   font-size: 2.5rem;
-}
-
-#quality {
-  font-size: 4rem;
-  letter-spacing: -0.3rem;
-  color: rgb(255, 196, 107);
 }
 
 #text1 {
   line-height: 3rem;
-  padding: 2rem 0 0 0;
+  padding: 6rem 0 0 0;
+}
+
+.work-heading {
+  padding-top: 4rem;
+}
+
+.wrkhead {
+  font-size: 10rem;
+}
+
+#highlight {
+  transform: translate(22rem, -16.5rem);
+  z-index: -1;
+  width: 50rem;
 }
