@@ -132,21 +132,20 @@ a {
   margin-top: 48rem;
 }
 .rotateing-text1 {
-  transform: translateY(-37rem);
+  transform: translateY(-39rem);
 }
 
 #circ {
   display: inline-block;
   margin-top: 8rem;
-  font-size: 2.2rem;
-  font-family: "cousine", monospace;
+  font-size: 3.8rem;
   text-transform: uppercase;
   animation: spin 115s linear infinite;
 }
 
 #circ2 {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 3rem;
   text-transform: uppercase;
   animation: spin1 180s linear infinite;
   color: rgb(255, 255, 255);
@@ -181,17 +180,22 @@ a {
 }
 
 .downarrow2 {
-  transform: translateY(-31rem);
+  transform: translateY(-55.5rem);
+}
+
+#create-more {
+  width: 18rem;
+  transform: translate(38.6rem, -66.6rem);
 }
 
 #downarrow2 {
-  width: 3rem;
+  width: 4rem;
 }
 
 .container2 {
   background: #faf7f4;
-  height: 100rem;
-  transform: translateY(-42rem);
+  height: 125rem;
+  transform: translateY(-38rem);
 }
 
 .text {
@@ -216,4 +220,82 @@ a {
   transform: translate(22rem, -16.5rem);
   z-index: -1;
   width: 50rem;
+}
+
+.container3 {
+  transform: translateY(-85rem);
+  height: 150rem;
+  background-color: rgb(252, 223, 144);
+  position: relative;
+}
+
+.cam {
+  width: 22rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -13rem);
+}
+
+.motion-heading {
+  padding-top: 8rem;
+  font-size: 5rem;
+}
+
+.sub-motion-heading {
+  font-size: 2rem;
+}
+
+.motion-heading1 {
+  padding-top: 48rem;
+  font-size: 5rem;
+}
+
+.sub-motion-heading1 {
+  font-size: 2rem;
+}
+
+#mac {
+  margin-top: 3rem;
+  width: 70rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#dont {
+  width: 54rem;
+  height: 34rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 4rem);
+}
+
+#logo {
+  width: 54rem;
+  height: 36rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 2.5rem);
+}
+
+#mac1 {
+  margin-top: 3rem;
+  width: 70rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ae {
+  width: 15rem;
+  position: absolute;
+  transform: translate(75rem, -34rem);
+  box-shadow: 12px 10px 12px rgb(139, 103, 4);
+}
+
+.ae1 {
+  width: 15rem;
+  position: absolute;
+  transform: translate(4.8rem, 23rem);
+  box-shadow: -12px 10px 12px rgb(139, 103, 4);
 }
