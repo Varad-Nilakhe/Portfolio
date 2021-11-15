@@ -47,15 +47,10 @@ tl.fromTo(
 );
 tl.fromTo(".imgs", { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.6");
 
-tl.fromTo(
-  ".slidedef",
-  { opacity: 0, x: "160%" },
-  { opacity: 1, x: "0%", duration: 0.6 },
-  "-=0.6"
-);
+tl.fromTo(".slidedef", { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.6");
 tl.fromTo(
   "#nav-div",
-  { opacity: 0, y: "20%" },
+  { opacity: 0, y: "-50%" },
   { opacity: 1, y: "0%", duration: 0.6 },
   "-=0.6"
 );
@@ -94,25 +89,43 @@ smoothScroll();
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
-timeline.to(".art-text", 10, { y: 200 });
+timeline.to(".art-text", 20, { y: 200 });
 timeline.fromTo(
   ".container1",
   { borderRadius: 2800 },
   { borderRadius: -600, duration: 4 },
-  "-=8.6"
+  "-=15.2"
 );
-timeline.fromTo(".cir", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=7.3");
+timeline.fromTo(".cir", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=14");
 timeline.fromTo(
   ".container2",
   { borderRadius: 2800 },
   { borderRadius: -600, duration: 4 },
-  "-=6.6"
+  "-=11"
 );
 timeline.fromTo(
   ".opaci",
   { opacity: 0, y: "30%" },
   { opacity: 1, y: "0%", duration: 1 },
-  "-=5.2"
+  "-=10"
+);
+timeline.fromTo(
+  ".container3",
+  { borderRadius: 2800 },
+  { borderRadius: -600, duration: 4 },
+  "-=5"
+);
+timeline.fromTo(
+  ".cam",
+  { rotation: 20, width: "20rem" },
+  { rotation: -25, width: "30rem", duration: 4 },
+  "-=6"
+);
+timeline.fromTo(
+  ".photo-video",
+  { opacity: 0, y: "30%" },
+  { opacity: 1, y: "0%", duration: 2 },
+  "-=4"
 );
 
 let scene = new ScrollMagic.Scene({
@@ -140,7 +153,7 @@ ScrollTrigger.create({
       proxy.skew = skew;
       gsap.to(proxy, {
         skew: 0,
-        duration: 0.5,
+        duration: 1,
         ease: "power3",
         overwrite: true,
         onUpdate: () => skewSetter(proxy.skew),
