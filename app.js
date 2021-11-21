@@ -4,12 +4,12 @@ const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 tl.fromTo(
   ".slide4",
   { opacity: 0, y: "-155%", fontSize: "10rem" },
-  { opacity: 1, y: "-180%", duration: 0.6 }
+  { opacity: 1, y: "-178%", duration: 0.6 }
 );
 tl.fromTo(
   ".slide5",
   { opacity: 0, y: "-155%", fontSize: "10rem" },
-  { opacity: 1, y: "-185%", duration: 0.6 },
+  { opacity: 1, y: "-183%", duration: 0.6 },
   "-=0.4"
 );
 tl.fromTo(
@@ -18,7 +18,11 @@ tl.fromTo(
   { opacity: 1, y: "-68%", duration: 1 },
   "-=0.6"
 );
-tl.to(".slide4", { y: "0%", fontSize: "7.5rem", duration: 0.6 });
+tl.to(".slide4", {
+  y: "0%",
+  fontSize: "7.5rem",
+  duration: 0.6,
+});
 tl.to(".slide5", { y: "0%", fontSize: "7.5rem", duration: 0.6 }, "-=0.6");
 tl.to("#arttext", { y: "0%", fontSize: "40rem", duration: 1 }, "-=0.4");
 
@@ -59,6 +63,7 @@ tl.fromTo(
 
 new kursor({
   type: 1,
+  color: "rgb(255, 162, 167)",
   removeDefaultCursor: true,
 });
 
@@ -89,7 +94,7 @@ smoothScroll();
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
-timeline.to(".art-text", 20, { y: 200 });
+timeline.to(".art-text", 20, { y: 400 });
 timeline.fromTo(
   ".container1",
   { borderRadius: 2800 },
@@ -117,16 +122,18 @@ timeline.fromTo(
 );
 timeline.fromTo(
   ".cam",
-  { rotation: 20, width: "20rem" },
-  { rotation: -25, width: "30rem", duration: 4 },
+  { rotation: 20, width: "15rem" },
+  { rotation: -25, width: "25rem", duration: 4 },
   "-=6"
 );
-timeline.fromTo(
-  ".photo-video",
-  { opacity: 0, y: "30%" },
-  { opacity: 1, y: "0%", duration: 2 },
-  "-=4"
-);
+// timeline.fromTo(
+//   ".photo-video",
+//   { opacity: 1, y: "5%" },
+//   { opacity: 1, y: "0%", duration: 3 },
+//   "-=4"
+// );
+
+timeline.to(".webdev", { y: "10%" }, { y: "0%", duration: 1 }, "-=2");
 
 let scene = new ScrollMagic.Scene({
   triggerElement: "nav .nav-div",
@@ -137,6 +144,9 @@ let scene = new ScrollMagic.Scene({
   .setTween(timeline)
   .setPin("nav .nav-div")
   .addTo(controller);
+
+// gsap animation 2
+let timeline2 = new TimelineMax();
 
 // skeww effect
 
