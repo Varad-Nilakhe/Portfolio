@@ -1,12 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Cinzel Decorative", cursive;
+  /* font-family: "Cinzel Decorative", cursive; */
   /* cursor: none; */
 }
 body {
   /* cursor: none; */
-  background-color: #f1eae5;
+  background: white;
 }
 
 .flex-disp {
@@ -15,6 +15,7 @@ body {
 }
 
 #nav-div {
+  font-family: "Cinzel Decorative", cursive;
   font-size: 1.8rem;
   z-index: 10;
   margin: 3rem 3rem;
@@ -40,6 +41,7 @@ a {
 .inside-first {
   margin: 0 auto;
   max-width: 70rem;
+  /* color: #5928e5; */
 }
 
 .welcome-text {
@@ -132,20 +134,21 @@ a {
   margin-top: 48rem;
 }
 .rotateing-text1 {
-  transform: translateY(-39rem);
+  transform: translateY(-40.6rem);
 }
 
 #circ {
   display: inline-block;
   margin-top: 8rem;
-  font-size: 3.8rem;
+  font-size: 4rem;
   text-transform: uppercase;
   animation: spin 115s linear infinite;
+  /* color: rgb(243, 113, 255); */
 }
 
 #circ2 {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 3.1rem;
   text-transform: uppercase;
   animation: spin1 180s linear infinite;
   color: rgb(255, 255, 255);
@@ -171,7 +174,9 @@ a {
 }
 
 .container1 {
-  background: #ead4c7;
+  font-family: "Cinzel Decorative", cursive;
+  background: #5928e5;
+  box-shadow: 1px 1px 30px rgb(118, 69, 255);
   height: 100rem;
 }
 
@@ -180,25 +185,28 @@ a {
 }
 
 .downarrow2 {
-  transform: translateY(-55.5rem);
+  transform: translate(1rem, -55rem);
 }
 
 #create-more {
   width: 18rem;
-  transform: translate(38.6rem, -66.6rem);
+  transform: translate(38.6rem, -68rem);
 }
 
 #downarrow2 {
-  width: 4rem;
+  width: 3rem;
 }
 
 .container2 {
-  background: #faf7f4;
+  font-family: "Cinzel Decorative", cursive;
+  background-color: white;
+  box-shadow: -1px 1px 50px rgb(197, 93, 197);
   height: 125rem;
-  transform: translateY(-38rem);
+  transform: translateY(-32rem);
 }
 
 .text {
+  padding-top: 4rem;
   text-align: center;
   font-size: 2.5rem;
 }
@@ -213,7 +221,7 @@ a {
 }
 
 .wrkhead {
-  font-size: 10rem;
+  font-size: 11rem;
 }
 
 #highlight {
@@ -223,79 +231,135 @@ a {
 }
 
 .container3 {
-  transform: translateY(-85rem);
-  height: 150rem;
-  background-color: rgb(252, 223, 144);
+  padding-top: 4rem;
+  transform: translateY(-70rem);
+  /* height: 220rem; */
+  /* background-color: rgb(252, 223, 144); */
+  background: #5928e5;
+  box-shadow: -1px 1px 50px rgb(0, 59, 221);
   position: relative;
+}
+
+.wrapper {
+  margin-top: -14rem;
+  position: absolute;
+  width: 100%;
+}
+
+.gradient1 {
+  background-image: linear-gradient(
+    #5928e5,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    #5928e5
+  );
+  width: 100%;
+  height: calc(101vh);
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
 }
 
 .cam {
   width: 22rem;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -13rem);
+  transform: translate(-50%, -12rem);
 }
 
 .motion-heading {
-  padding-top: 8rem;
-  font-size: 5rem;
+  margin-top: 15rem;
+  font-size: 10rem;
+  text-align: center;
+  /* font-family: "Helvetica Neue", sans-serif; */
+  /* font-weight: bold; */
+  letter-spacing: -0.5rem;
+  word-spacing: 0.5rem;
+  font-family: "Cinzel Decorative", cursive;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.5px rgb(246, 116, 255);
+  -webkit-font-smoothing: antialiased;
+  /* background: -webkit-radial-gradient(rgb(197, 197, 197), rgb(34, 34, 34));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .sub-motion-heading {
-  font-size: 2rem;
+  transform: translateY(-21rem);
+  font-size: 12rem;
+  letter-spacing: -0.1rem;
+  font-family: "Cinzel Decorative", cursive;
+  color: white;
 }
 
 .motion-heading1 {
-  padding-top: 48rem;
-  font-size: 5rem;
+  margin-top: 42rem;
+  font-size: 10rem;
+  text-align: center;
+  letter-spacing: -0.5rem;
+  word-spacing: 0.5rem;
+  font-family: "Cinzel Decorative", cursive;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.3px rgb(246, 116, 255);
+  -webkit-font-smoothing: antialiased;
 }
 
 .sub-motion-heading1 {
-  font-size: 2rem;
-}
-
-#mac {
-  margin-top: 3rem;
-  width: 70rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  font-size: 12rem;
+  padding-bottom: 3rem;
+  transform: translateY(-21rem);
+  letter-spacing: -0.1rem;
+  font-family: "Cinzel Decorative", cursive;
+  color: white;
 }
 
 #dont {
-  width: 54rem;
-  height: 34rem;
+  padding-bottom: 0.5vh;
+  height: 100vh;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 4rem);
+  transform: translate(-50%, -100%);
 }
 
 #logo {
-  width: 54rem;
-  height: 36rem;
+  padding-bottom: 0.5vh;
+  height: 100vh;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 2.5rem);
-}
-
-#mac1 {
-  margin-top: 3rem;
-  width: 70rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -100%);
 }
 
 .ae {
   width: 15rem;
   position: absolute;
-  transform: translate(75rem, -34rem);
-  box-shadow: 12px 10px 12px rgb(139, 103, 4);
+  transform: translate(77rem, -92rem);
+  z-index: 3;
+  box-shadow: 12px 10px 12px rgb(49, 49, 49);
 }
 
 .ae1 {
   width: 15rem;
   position: absolute;
-  transform: translate(4.8rem, 23rem);
-  box-shadow: -12px 10px 12px rgb(139, 103, 4);
+  transform: translate(4rem, 12rem);
+  z-index: 3;
+  box-shadow: -12px 10px 12px rgb(61, 61, 61);
+}
+
+.motion-heading2 {
+  text-align: center;
+  margin-top: 40rem;
+  font-size: 10rem;
+  text-align: center;
+  letter-spacing: -0.5rem;
+  word-spacing: 0.5rem;
+  font-family: "Cinzel Decorative", cursive;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.3px rgb(246, 116, 255);
+  -webkit-font-smoothing: antialiased;
 }
