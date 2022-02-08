@@ -63,7 +63,7 @@ tl.fromTo(
 
 new kursor({
   type: 1,
-  color: "rgb(255, 162, 167)",
+  color: "rgb(65, 37, 26)",
   removeDefaultCursor: true,
 });
 
@@ -126,12 +126,6 @@ timeline.fromTo(
   { rotation: -25, width: "25rem", duration: 4 },
   "-=6"
 );
-// timeline.fromTo(
-//   ".photo-video",
-//   { opacity: 1, y: "5%" },
-//   { opacity: 1, y: "0%", duration: 3 },
-//   "-=4"
-// );
 
 timeline.to(".webdev", { y: "10%" }, { y: "0%", duration: 1 }, "-=2");
 
