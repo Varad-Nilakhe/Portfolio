@@ -6,7 +6,7 @@
 }
 body {
   /* cursor: none; */
-  background: white;
+
   overflow-x: hidden;
 }
 
@@ -32,6 +32,157 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: black;
+  pointer-events: none;
+}
+
+.nav-bar {
+  position: fixed;
+  margin: 1.8rem 2rem;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 92%;
+  box-shadow: 1px 1px 8px rgb(0, 0, 0);
+  border: none;
+  background: linear-gradient(170deg, #ffffff 60%, #f5f5f5 60%);;
+  /* background: #edc7b7; */
+  /* background: url(./images/hand.jpg);
+  background-size: 100% 100%; */
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+.burger {
+  cursor: pointer;
+}
+.nav-links {
+  font-size: 1rem;
+  flex-basis: 30rem;
+  text-align: center;
+}
+.nav-links h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: absolute;
+  transform: translateY(13rem);
+  /* text-shadow: 1px 1px 6px rgb(130, 116, 82); */
+  width: 100%;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0rem 0 0 0;
+}
+
+.social {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  transform: translate(0rem, 28.5rem);
+}
+
+.link-mail {
+  transform: translate(0, 17rem);
+}
+
+.linked-div {
+  transition: 0.3s;
+}
+
+.flex-btn {
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(0rem, 29rem);
+  padding: 0.5rem;
+  width: 6rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-btn {
+  padding: 0.2rem;
+}
+
+.fr-hover {
+  background-image: url(./images/linkedin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  width: 2rem;
+  height: 2rem;
+}
+
+.fr-hover:hover {
+  border-bottom: 1px solid black; 
+}
+
+.fr-hover2 {
+  background-image: url(./images/github.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  width: 2rem;
+  height: 2rem;
+}
+
+.fr-hover2:hover {
+  border-bottom: 1px solid black;
+}
+
+
+.link-img {
+  align-items: center;
+  width: 2rem;
+  transition: 0.3s;
+}
+
+#mail {
+  font-size: 4rem;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.mail {
+  transition: 0.5s;
+  color: rgb(22, 22, 22);
+}
+
+.mail:hover {
+  color: #f2c200;
+}
+
+.txt {
+  transform: translateY(10rem);
+}
+
+
+.nav-links a {
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Cinzel Decorative", cursive;
+  transition: all 0.3s;
+}
+
+body.hide {
+  overflow: hidden;
 }
 
 .first {
@@ -200,7 +351,9 @@ a {
 
 .container2 {
   font-family: "Cinzel Decorative", cursive;
-  background: #faf7f4;
+  /* background: #faf7f4; */
+  background-image: url(images/bg.jpg);
+  background-size: cover;
   box-shadow: -1px 1px 50px rgb(121, 88, 78);
   height: 125rem;
   transform: translateY(-32rem);
@@ -433,12 +586,6 @@ a {
   color: white;
 }
 
-.skills_web {
-  font-family: "Cinzel Decorative", cursive;
-  font-size: 5rem;
-  padding: 0 0 0 2rem;
-}
-
 #new {
   display: inline-block;
   font-size: 6rem;
@@ -451,11 +598,11 @@ a {
 }
 
 .transform {
-  transform: translateX(275vw);
+  transform: translate(275vw, -6rem);
 }
 
 .transform1 {
-  transform: translate(0rem, -8rem);
+  transform: translate(0rem, -14rem);
 }
 
 .exp {
@@ -470,4 +617,10 @@ a {
   100% {
     transform: translateX(-275vw);
   }
+}
+
+.container4 {
+  background-color: #f9d326;
+  height: 100vh;
+  transform: translate(0, -70rem);
 }
