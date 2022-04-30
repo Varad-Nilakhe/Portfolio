@@ -1,3 +1,5 @@
+
+
 // another gsap
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -72,7 +74,7 @@ new kursor({
 const body = document.body,
   scrollWrap = document.getElementsByClassName("smooth")[0],
   height = scrollWrap.getBoundingClientRect().height - 1,
-  speed = 0.06;
+  speed = 0.08;
 
 var offset = 0;
 
@@ -89,10 +91,34 @@ function smoothScroll() {
 
 smoothScroll();
 
+//burger toggle
+const burger = document.querySelector(".burger");
+
+function navToggle(e) {
+  if (!e.target.classList.contains("active")) {
+    e.target.classList.add("active");
+    gsap.to(".line1", 0.5, { rotate: "45", y: 5,x: -18, background: "black" });
+    gsap.to(".line2", 0.5, { rotate: "-45", y: -5,x: -18, background: "black" });
+    gsap.to(".logo", 0.5, { opacity: "0" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
+    document.body.classList.add("hide");
+  } else {
+    e.target.classList.remove("active");
+    gsap.to(".line1", 0.5, { rotate: "0", y: 0,x: 0, background: "black" });
+    gsap.to(".line2", 0.5, { rotate: "0", y: 0,x: 0, background: "black" });
+    gsap.to(".logo", 1, { opacity: "1" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%)" });
+    document.body.classList.remove("hide");
+  }
+}
+
+
+
 // Animation
 
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
+
 
 timeline.to(".art-text", 20, { y: 400 });
 timeline.fromTo(
@@ -139,6 +165,10 @@ let scene = new ScrollMagic.Scene({
   .setPin("nav .nav-div")
   .addTo(controller);
 
+
+//event listeners
+burger.addEventListener("click", navToggle);
+
 // gsap animation 2
 let timeline2 = new TimelineMax();
 
@@ -168,3 +198,4 @@ ScrollTrigger.create({
 
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
 gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
+
